@@ -28,7 +28,7 @@ function classNames(...classes) {
 function Navbar() {
   return (
     <div className="navbar">
-      <nav className="bg-blue-600 py-3 px-6 max-w-full m-auto text-white flex justify-around">
+      <nav className="bg-blue-600 py-3 px-6 w-full m-auto text-white flex justify-around fixed">
         <div>
           <img
             src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
