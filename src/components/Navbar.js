@@ -1,9 +1,23 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from "react";
 import {
   PlusIcon,
   SearchIcon,
   ChevronDownIcon,
   ShoppingCartIcon,
+  UserCircleIcon,
+  CurrencyDollarIcon,
+  ArchiveIcon,
+  HeartIcon,
+  AnnotationIcon,
+  TicketIcon,
+  CreditCardIcon,
+  BellIcon,
+  LogoutIcon,
+  BriefcaseIcon,
+  QuestionMarkCircleIcon,
+  PresentationChartBarIcon,
+  DownloadIcon,
 } from "@heroicons/react/solid";
 import { Menu, Transition } from "@headlessui/react";
 
@@ -23,7 +37,7 @@ function Navbar() {
           />
           <p className="italic text-white font-light text-xs flex">
             Explore{" "}
-            <span className="text-yellow-300 font-medium gap-x-1"> Plus</span>
+            <span className="text-yellow-300 font-medium gap-x-1">Plus</span>
             <span>
               <PlusIcon className="w-3 h-3" color="yellow" />
             </span>
@@ -66,44 +80,50 @@ function Navbar() {
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
+                          // eslint-disable-next-line jsx-a11y/anchor-is-valid
                           <a
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block px-4 py-3 text-sm border-b-2"
+                              "text-center px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <UserCircleIcon className="h-5 w-5 mr-4 text-blue-500" />
                             My Profile
                           </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
+                          // eslint-disable-next-line jsx-a11y/anchor-is-valid
                           <a
                             href="#"
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block px-4 py-3 text-sm border-b-2"
+                              "text-center px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <CurrencyDollarIcon className="h-6 w-6 mr-4 text-blue-500" />
                             SuperCoin Zone
                           </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
+                          // eslint-disable-next-line jsx-a11y/anchor-is-valid
                           <a
                             href="#"
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block px-4 py-3 text-sm border-b-2"
+                              "text-center px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <PlusIcon className="mr-4 text-blue-500 h-6 w-6" />
                             Flipkart Plus Zone
                           </a>
                         )}
@@ -116,9 +136,10 @@ function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block w-full px-4 py-3 text-sm border-b-2"
+                              "text-center w-full px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <ArchiveIcon className="text-blue-500 mr-4 w-6 h-6" />
                             Orders
                           </button>
                         )}
@@ -131,9 +152,10 @@ function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block w-full px-4 py-3 text-sm border-b-2"
+                              "text-center w-full px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <HeartIcon className="text-blue-500 mr-4 w-6 h-6" />
                             Wishlist
                           </button>
                         )}
@@ -146,9 +168,10 @@ function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block w-full px-4 py-3 text-sm border-b-2"
+                              "text-center w-full px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <AnnotationIcon className="text-blue-500 mr-4 w-6 h-6" />
                             My Chats
                           </button>
                         )}
@@ -161,9 +184,10 @@ function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block w-full px-4 py-3 text-sm border-b-2"
+                              "text-center w-full px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <TicketIcon className="text-blue-500 mr-4 w-6 h-6" />
                             Coupons
                           </button>
                         )}
@@ -176,9 +200,10 @@ function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block w-full px-4 py-3 text-sm border-b-2"
+                              "text-center w-full px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <CreditCardIcon className="text-blue-500 mr-4 w-6 h-6" />
                             Gift Cards
                           </button>
                         )}
@@ -191,9 +216,10 @@ function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block w-full px-4 py-3 text-sm border-b-2"
+                              "text-center w-full px-4 py-3 text-sm border-b-2 flex"
                             )}
                           >
+                            <BellIcon className="text-blue-500 mr-4 w-6 h-6" />
                             Notifications
                           </button>
                         )}
@@ -206,9 +232,10 @@ function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
-                              "text-center block w-full px-4 py-3 text-sm"
+                              "text-center w-full px-4 py-3 text-sm flex"
                             )}
                           >
+                            <LogoutIcon className="text-blue-500 mr-4 w-6 h-6" />
                             Logout
                           </button>
                         )}
@@ -245,9 +272,10 @@ function Navbar() {
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700",
-                                "text-center block px-4 py-3 text-sm border-b-2"
+                                "text-center px-4 py-3 text-sm border-b-2 flex"
                               )}
                             >
+                              <BellIcon className="text-blue-500 mr-4 w-6 h-6" />
                               Notification Preferences
                             </a>
                           )}
@@ -260,9 +288,10 @@ function Navbar() {
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700",
-                                "text-center block px-4 py-3 text-sm border-b-2"
+                                "text-center flex px-4 py-3 text-sm border-b-2"
                               )}
                             >
+                              <BriefcaseIcon className="text-blue-500 mr-4 w-6 h-6" />
                               Sell on Flipkart
                             </a>
                           )}
@@ -275,9 +304,10 @@ function Navbar() {
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700",
-                                "text-center block px-4 py-3 text-sm border-b-2"
+                                "text-center flex px-4 py-3 text-sm border-b-2"
                               )}
                             >
+                              <QuestionMarkCircleIcon className="text-blue-500 mr-4 w-6 h-6" />
                               24X7 Customer Care
                             </a>
                           )}
@@ -290,9 +320,10 @@ function Navbar() {
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700",
-                                "text-center block w-full px-4 py-3 text-sm border-b-2"
+                                "text-center flex w-full px-4 py-3 text-sm border-b-2"
                               )}
                             >
+                              <PresentationChartBarIcon className="text-blue-500 mr-4 w-6 h-6" />
                               Advertise
                             </button>
                           )}
@@ -305,9 +336,10 @@ function Navbar() {
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700",
-                                "text-center block w-full px-4 py-3 text-sm"
+                                "text-center flex w-full px-4 py-3 text-sm"
                               )}
                             >
+                              <DownloadIcon className="text-blue-500 mr-4 w-6 h-6" />
                               Download App
                             </button>
                           )}
