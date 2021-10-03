@@ -2,7 +2,7 @@ import React from "react";
 
 function CategoryCard({ image, categoryName }) {
   return (
-    <div className="px-1 py-8 sm:px-10">
+    <div className="px-3 py-8 sm:px-10">
       <img
         src={image}
         alt={categoryName}

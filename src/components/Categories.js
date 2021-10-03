@@ -50,7 +50,7 @@ function Categories() {
     },
   ];
   return (
-    <div className="categories flex justify-around pt-16 overflow-x-scroll shadow-lg">
+    <div className="categories flex xl:justify-evenly pt-16 overflow-scroll shadow-lg">
       {categories.map((category) => (
         <CategoryCard image={category.image} categoryName={category.name} />
       ))}
