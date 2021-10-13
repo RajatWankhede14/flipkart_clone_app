@@ -5,7 +5,7 @@ import InfoCard from "./InfoCard";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="mx-10 py-9 flex justify-evenly">
+      <div className="sm:mx-10 py-9 flex justify-evenly flex-col mx-auto sm:flex-row">
         <FooterCList
           title="About"
           list={[

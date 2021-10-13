@@ -51,12 +51,15 @@ function Navbar() {
             className="text-black px-4 py-2 text-sm border-none w-full"
             placeholder="Search for products, brands and more"
           />
-          <SearchIcon className="h-9 w-auto bg-white p-1 " color="blue" />
+          <SearchIcon className="h-9 w-auto bg-white p-1" color="blue" />
         </div>
         <div className="w-1/3">
           <ul className="flex justify-evenly">
             <li className="align-middle py-2">
-              <Menu as="div" className="relative inline-block text-left">
+              <Menu
+                as="div"
+                className="relative inline-block text-left sm:block hidden"
+              >
                 <div>
                   <Menu.Button className="inline-flex justify-center w-full rounded-md border-gray-300 shadow-sm text-xs sm:text-base font-medium text-white">
                     Options

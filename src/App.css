@@ -20,6 +20,12 @@ body {
   max-width: fit-content;
 }
 
+@media only screen and (max-width: 765px) {
+  .product_div > img {
+    height: 120px;
+  }
+}
+
 .products_row {
   display: flex;
   width: 100%;
