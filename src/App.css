@@ -4,3 +4,25 @@
   box-sizing: border-box;
   font-family: "Roboto";
 }
+
+body {
+  background-color: #f0f3f6;
+}
+
+.product_div {
+  margin-right: 10px;
+  background-color: #ffffff;
+}
+
+.product_div > img {
+  height: 200px;
+  object-fit: contain;
+  max-width: fit-content;
+}
+
+.products_row {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  /* flex-direction: column; */
+}
