@@ -4,7 +4,7 @@ import "../App.css";
 
 function ProductCards() {
   let arr = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 12; i++) {
     arr.push(i);
   }
   return (

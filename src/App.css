@@ -26,3 +26,10 @@ body {
   overflow-x: scroll;
   /* flex-direction: column; */
 }
+
+/* Footer */
+
+.footer {
+  background-color: #182436;
+  color: #ffffff;
+}
