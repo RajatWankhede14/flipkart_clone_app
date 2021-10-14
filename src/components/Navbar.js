@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import {
   PlusIcon,
   SearchIcon,
@@ -20,12 +19,16 @@ import {
   DownloadIcon,
 } from "@heroicons/react/solid";
 import { Menu, Transition } from "@headlessui/react";
+import LoginPopUp from "./LoginPopUp";
+// import { useStore } from "react-redux";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 function Navbar() {
+  const [user] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <div className="navbar">
       <nav className="bg-blue-600 py-3 px-6 w-full m-auto text-white flex justify-around fixed">
@@ -58,18 +61,27 @@ function Navbar() {
             <li className="align-middle py-2">
               <Menu
                 as="div"
-                className="relative inline-block text-left sm:block hidden"
+                className="relative sm:inline-block text-left hidden"
               >
                 <div>
-                  <Menu.Button className="inline-flex justify-center w-full rounded-md border-gray-300 shadow-sm text-xs sm:text-base font-medium text-white">
-                    Options
-                    <ChevronDownIcon
-                      className="h-5 w-5 align-middle"
-                      aria-hidden="true"
-                    />
-                  </Menu.Button>
+                  {user ? (
+                    <Menu.Button className="inline-flex justify-center w-full rounded-md border-gray-300 shadow-sm text-xs sm:text-base font-medium text-white">
+                      Options
+                      <ChevronDownIcon
+                        className="h-5 w-5 align-middle"
+                        aria-hidden="true"
+                      />
+                    </Menu.Button>
+                  ) : (
+                    <button
+                      className="bg-white text-blue-600 font-semibold px-6 border-0"
+                      onClick={() => setOpen(!open)}
+                    >
+                      Login
+                    </button>
+                  )}
                 </div>
-
+                <LoginPopUp open={open} setOpen={setOpen} />
                 <Transition
                   as={Fragment}
                   enter="transition ease-out duration-100"
@@ -270,6 +282,7 @@ function Navbar() {
                       <div className="py-1">
                         <Menu.Item>
                           {({ active }) => (
+                            // eslint-disable-next-line jsx-a11y/anchor-is-valid
                             <a
                               className={classNames(
                                 active
@@ -285,6 +298,7 @@ function Navbar() {
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
+                            // eslint-disable-next-line jsx-a11y/anchor-is-valid
                             <a
                               href="#"
                               className={classNames(
@@ -301,6 +315,7 @@ function Navbar() {
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
+                            // eslint-disable-next-line jsx-a11y/anchor-is-valid
                             <a
                               href="#"
                               className={classNames(
