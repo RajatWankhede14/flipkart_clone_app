@@ -4,10 +4,10 @@ import "../App.css";
 
 function LoginPopUp({ open, setOpen, setUser }) {
   return (
-    <div className="align-middle">
+    <div className="align-middle relative">
       {open ? (
         <div className="loginPopUp">
-          <div className="bg-blue-500 text-white px-7 py-9 w-min">
+          <div className="bg-blue-500 text-white px-7 py-9">
             <h1 className="text-3xl font-semibold pb-10">Login</h1>
             <p>Get access to your Orders, Wishlist and Recommendations</p>
             <img
