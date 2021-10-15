@@ -39,3 +39,18 @@ body {
   background-color: #182436;
   color: #ffffff;
 }
+
+/* PopUp */
+
+.loginPopUp {
+  display: flex;
+  position: absolute;
+  background-color: #ffffff;
+  color: #000;
+  top: 7rem;
+  border: 1px solid gray;
+  z-index: 4;
+  right: 10%;
+  border-radius: 10px;
+  /* top-40 border-2 rounded-lg bg-white text-black right-48 h-auto */
+}

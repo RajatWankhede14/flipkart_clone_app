@@ -27,7 +27,7 @@ function classNames(...classes) {
 }
 
 function Navbar() {
-  const [user] = useState(false);
+  const [user, setUser] = useState(false);
   const [open, setOpen] = useState(false);
   return (
     <div className="navbar">
@@ -81,7 +81,7 @@ function Navbar() {
                     </button>
                   )}
                 </div>
-                <LoginPopUp open={open} setOpen={setOpen} />
+                <LoginPopUp open={open} setOpen={setOpen} setUser={setUser} />
                 <Transition
                   as={Fragment}
                   enter="transition ease-out duration-100"
@@ -249,6 +249,7 @@ function Navbar() {
                                 : "text-gray-700",
                               "text-center w-full px-4 py-3 text-sm flex"
                             )}
+                            onClick={() => setUser(false)}
                           >
                             <LogoutIcon className="text-blue-500 mr-4 w-6 h-6" />
                             Logout
